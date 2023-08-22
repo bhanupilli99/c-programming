@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int stringLength(const char *str) {
+    const char *ptr = str;
+    while (*ptr != '\0') {
+        ptr++;
+    }
+    return ptr - str;
+}
+
+int main() {
+    char input[100];
+
+    printf("Enter a string: ");
+    scanf("%s", input);
+
+    int length = stringLength(input);
+
+    printf("Length of the string: %d\n", length);
+
+    return 0;
+}
